@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="../static/css/style1.css">
+
+    <script src="js/showHide.js"></script>
+</head>
+
+<body>
+    <section class="sec">
+        <a href="../templates/index.html" class="logo" style="font-size: 3.5rem;color: white; text-decoration: none"><img
+            src="../static/images/logo.png"
+            style="height: 8%; display:inline;">NEWSIFY</a>
+        <div class="form-container">
+            <h1>Register</h1>
+            <form action="" method="post">
+                <div class="control">
+                    <label for="name">Name</label>
+                    <input class="" type="text" name="name" id="name" placeholder="Name" value="">
+                    <span class="">
+                        <!-- <?php echo $name_err; ?> -->
+                    </span>
+                </div>
+                <div class="control">
+                    <label for="phone">Phone No.</label>
+                    <input class="" type="text" name="phone" id="phone" placeholder="Phone Number" value="">
+                    <span class="">
+                        <!-- <?php echo $phone_err; ?> -->
+                    </span>
+                </div>
+                <div class="control">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" placeholder="Email-Address">
+                    <span class="">
+                        <!-- <?php echo $email_err; ?> -->
+                    </span>
+                </div>
+                <div class="control">
+                    <label for="psw">Password</label>
+                    <input class="" type="password" placeholder="********" name="password" id="pass" value=""
+                        required />
+                    <span class="">
+                        <!-- <?php echo $password_err; ?> -->
+                    </span>
+                </div>
+                <div class="control">
+                    <label for="psw">Confirm Password</label>
+                    <input class="" type="password" placeholder="********" name="confirm_password" id="rpass" value=""
+                        required />
+                    <span class="">
+                        <!-- <?php echo $confirm_password_err; ?> -->
+                    </span>
+                </div>
+                <a href="javascript:showHide();" class="txt">
+                    <i class="fa fa-eye" id="eye"><span id="passstage"> Show</span></i>
+                </a>
+                <div class="control">
+                    <input type="submit" value="Register">
+                </div>
+            </form>
+            <div class="link">
+                <a href="login.html">Have an account? Login</a>
+            </div>
+        </div>
+</body>
+
+</html>
