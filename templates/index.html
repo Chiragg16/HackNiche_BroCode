@@ -31,9 +31,9 @@
 
     <header>
 
-        <a href="#" class="logo" style="font-size: 3.5rem;color: white;"><img
+        <a href="#" class="logo" style="font-size: 5rem;color: white;"><img
                 src="../static/images/logo.png"
-                style="height: 48px; padding-bottom: 2%;">NEWSIFY</a>
+                style="height:55px;margin:2rem">NEWSIFY</a>
         <nav class="navbar" style="margin-left: 600px;">
             <a class="active" href="index.html">home</a>
             <a href="aboutus.html">about us</a>
@@ -43,9 +43,10 @@
 
         <div class="icons">
             <i class="fas fa-bars" id="menu-bars"></i>
-            <!--  <a href="/wishList.html" class="fas fa-heart"></a> -->
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="" class="fas fa-user" data-bs-toggle="modal" data-bs-target="#exampleModalCenter1"></a>
             <a href="" class="fas fa-user" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"></a>
-            <!-- <a href="" class="fas fa-user" data-bs-toggle="modal" data-bs-target="#exampleModalCenter1"></a> -->
+            
         </div>
 
         <!-- Modal -->
@@ -62,18 +63,19 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <img style="border-radius: 50%;" src="../static/images/images.png image-respomsive img-center" />
+                    <img style="border-radius: 50%;" src="../static/images/images.png" class="image-responsive img-center" />
                     <div class="modal-header text-center">
                         <!-- <h3 class="modal-title w-100">Username</h3> -->
+                    </div>
                     </div>
                 </div>
                 <div class="">
                     <a href="login.html"
-                        style="width: 40rem; background: #B6AD90; margin: 10px 5rem; border-radius: 12px;"
+                    style="width: 40rem; background: #263159; margin: 10px 5rem; border-radius: 12px;"
                         class="btn">Login</a>
                     <br>
                     <a href="register.html"
-                        style="width: 40rem; background: #B6AD90; margin: 5px 5rem 3rem 5rem; border-radius: 12px;"
+                    style="width: 40rem; background: #263159; margin: 5px 5rem 3rem 5rem; border-radius: 12px;"
                         class="btn">Register</a>
                 </div>
             </div>
@@ -101,11 +103,11 @@
                 </div>
                 <div class="">
                     <a href="wishlist.html"
-                        style="width: 40rem; background: #B6AD90; margin: 10px 5rem; border-radius: 12px;"
+                        style="height: 5rem; width: 20rem; background: #263159; margin: 10px 5rem; border-radius: 12px;"
                         class="btn">WishList</a>
                     <br>
                     <a href="#"
-                        style="width: 40rem; background: #B6AD90; margin: 5px 5rem 3rem 5rem; border-radius: 12px;"
+                        style="width: 40rem; background: #263159; margin: 5px 5rem 3rem 5rem; border-radius: 12px;"
                         class="btn">Logout</a>
                 </div>
             </div>
@@ -127,8 +129,8 @@
     <!-- home section starts  -->
 
     
-    <section style="background-color: #fff; width: 0;"></section>
-    <section class="dishes" id="dishes" style="padding-top: 0;">
+    <section style="background: #fff; width: 0;"></section>
+    <section class="dishes" id="dishes" style="padding-top: 0;background:#fff">
         <div id="intro">
             <div class="bg_big bg_big_green glow">
                 <div id="opac1">
@@ -138,161 +140,39 @@
         </div>
         <br><br>
         <div class="box-container" id="newsdisplay">
+            <!-- <div class="row m-3" id="newsType"></div> -->
+            <!-- <div class="row me-2 ms-2" id="newsdetails"></div> -->
         </div>
     </section>
-    <!-- menu section ends -->
 
-    <!-- review section starts  -->
-
-    <section class="review" id="review">
-
-        <h3 class="sub-heading"> reviews </h3>
-        <h2 class="heading"> what they say </h2>
-
-        <div class="swiper-container review-slider">
-
-            <div class="swiper-wrapper">
-
-                <div class="swiper-slide slide">
-                    <i class="fas fa-quote-right"></i>
-                    <div class="user">
-                        <img src="../static/images/images.png" alt="">
-                        <div class="user-info">
-                            <h3>Rohan Ajmera</h3>
-                            <label class="cap" style="font-size:15px">
-                                12/04/2022
-                            </label>
-                        </div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ullam dicta doloribus
-                        optio sint, magni inventore tempore molestiae aspernatur suscipit? Veritatis, perferendis?
-                        Tempora suscipit porro impedit.</p>
-                </div>
-
-                <div class="swiper-slide slide">
-                    <i class="fas fa-quote-right"></i>
-                    <div class="user">
-                        <img src="images/images.png" alt="">
-                        <div class="user-info">
-                            <h3>Saniya Shah</h3>
-                            <label class="cap" style="font-size:15px">
-                                12/04/2022
-                            </label>
-                        </div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem neque, optio quae aperiam esse
-                        dolores libero, eveniet dignissimos soluta incidunt expedita repellat corrupti commodi quas
-                        quasi quam. Reprehenderit, expedita. Fugiat!</p>
-                </div>
-
-                <div class="swiper-slide slide">
-                    <i class="fas fa-quote-right"></i>
-                    <div class="user">
-                        <img src="..static/images/images.png" alt="">
-                        <div class="user-info">
-                            <h3>Raj Khanna</h3>
-                            <label class="cap" style="font-size:15px">
-                                12/04/2022
-                            </label>
-                        </div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa vel ut error officia a voluptatem
-                        optio nisi pariatur perspiciatis doloremque nobis, necessitatibus unde beatae aliquam amet
-                        consectetur sit autem dolorum.</p>
-                </div>
-
-                <div class="swiper-slide slide">
-                    <i class="fas fa-quote-right"></i>
-                    <div class="user">
-                        <img src="../static/images/images.png" alt="">
-                        <div class="user-info">
-                            <h3>Trupti patel</h3>
-                            <label class="cap" style="font-size:15px">
-                                12/04/2022
-                            </label>
-                        </div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur vel culpa blanditiis harum
-                        quo ipsa consequatur dignissimos quidem qui perferendis asperiores illum, eos dolore reiciendis
-                        suscipit molestias animi cumque hic!</p>
-                </div>
-
+    <div class="modal fade" id="comment" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle" style="font-size: 20px;"><b>Write a review</b></h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="font-size: 20px;">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
+            <div class="modal-body" style="padding-bottom: 0;">
+                <section class="order" id="order" style="padding: 0; margin: 0;">
+                    <form action="" method="post">
 
-        </div>
+                        <div class="inputBox">
+                            <div class="input" style="width:100%">
+                                <textarea name="review" placeholder="Write a review" id="" cols="30"
+                                    rows="5"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" name="section" value="{{x[5]}}" style="width:100%" class="btn">Add review</button>
+                    </form>
 
-    </section>
-    <section class="dishes" id="dishes">
-        <div id="intro">
-            <div class="bg_big bg_big_green glow">
-                <div id="opac1">
-                    <h1><b> most rated </b></h1>
-                </div>
+                </section>
             </div>
         </div>
-        <!-- <h3 class="sub-heading"> Trending </h3> -->
-        <br><br>
-        <!-- <div class="box-container newsdisplay"> -->
-        <!-- </div> -->
-
-    </section>
-    <!-- review section ends -->
-
-    <!-- order section starts  -->
-
-    <section class="order" id="order">
-
-        <h3 class="sub-heading"> order now </h3>
-        <h2 class="heading"> free and fast </h2>
-
-        <form action="">
-
-            <div class="inputBox">
-                <div class="input">
-                    <span>your name</span>
-                    <input type="text" placeholder="enter your name">
-                </div>
-                <div class="input">
-                    <span>your number</span>
-                    <input type="number" placeholder="enter your number">
-                </div>
-            </div>
-            <div class="inputBox">
-                <div class="input">
-                    <span>your order</span>
-                    <input type="text" placeholder="enter food name">
-                </div>
-                <div class="input">
-                    <span>additional food</span>
-                    <input type="test" placeholder="extra with food">
-                </div>
-            </div>
-            <div class="inputBox">
-                <div class="input">
-                    <span>how much</span>
-                    <input type="number" placeholder="how many orders">
-                </div>
-                <div class="input">
-                    <span>date and time</span>
-                    <input type="datetime-local">
-                </div>
-            </div>
-            <div class="inputBox">
-                <div class="input">
-                    <span>your address</span>
-                    <textarea name="" placeholder="enter your address" id="" cols="30" rows="10"></textarea>
-                </div>
-                <div class="input">
-                    <span>your message</span>
-                    <textarea name="" placeholder="enter your message" id="" cols="30" rows="10"></textarea>
-                </div>
-            </div>
-
-            <input type="submit" value="order now" class="btn">
-
-        </form>
-
-    </section>
+    </div>
+</div>
 
     <!-- order section ends -->
     <div>

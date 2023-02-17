@@ -175,11 +175,15 @@ const fetchQueryNews = async() => {
 
     displayNews();
 }
+function viewMoreSpecialPackageModal(){
+    $("#examplecomments").modal("show");
+}
 
 function displayNews() {
 
    
-    newsDataArr.forEach(news => {
+    newsDataArr.forEach(news => 
+{
     if(news.urlToImage==null){
         console.log("dummy");
         news.urlToImage="../static/images/download.png"
@@ -195,13 +199,36 @@ function displayNews() {
         '<div class="likedislike">'+
             '<button class="btn"><i id="green" class="fa fa-thumbs-up fa-lg" aria-hidden="true"></i></button>'+
         '<button class="btn"><i id="red" class="fa fa-thumbs-down fa-lg" aria-hidden="true"></i></button>'+
-        '<button class="btn" ><i  class="fas fa-comment"></i></button>'+
+        '<button class="btn com"><i  class="fas fa-comment" onclick="viewMoreSpecialPackageModal()"></i></button>'+
         '<button class="btn" ><i  class="fa fa-share-alt"></i></button>'+
         '</div>'+
-    '</div>';
+    '</div>'+
+    '<div class="modal fade" id="examplecomments'+news.title+'" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">'+
+            '<div class="modal-dialog modal-dialog-centered" role="document">'+
+              '<div class="modal-content">'+
+                '<div class="modal-header">'+
+                 ' <h5 class="modal-title" id="exampleModalLongTitle">'+news.title+'</h5>'+
+                  '<button type="button" class="close" data-dismiss="modal" aria-label="Close">'+
+                    '<span aria-hidden="true">&times;</span>'+
+                 ' </button>'+
+                '</div>'+
+                '<div class="modal-body">'+
+                '<label for="lname">Last name:</label><br>'+
+                '<input type="text" id="lname" name="lname" value="Doe">'+
+                '<input type="submit" value="Submit"></input>'
+                +'</div>'+
+                '<div class="modal-footer">'+
+                 ' <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>'+
+                  '<button type="button" class="btn btn-primary">Save changes</button>'+
+               ' </div>'+
+              '</div>'+
+            '</div>'+
+          '</div>';
     items.push(li);
     console.log(li);
         $("#newsdisplay").append(items.join(""));        
-    });
+});
+    
+        
 
 }
