@@ -1,6 +1,10 @@
 let menu = document.querySelector('#menu-bars');
 let navbar = document.querySelector('.navbar');
 
+$(document).ready(function(){
+    console.log("data");
+});
+
 menu.onclick = () =>{
   menu.classList.toggle('fa-times');
   navbar.classList.toggle('active');
@@ -88,3 +92,6 @@ function fadeOut(){
 
 window.onload = fadeOut;
 
+function submitUser(){
+  
+}
