@@ -270,7 +270,7 @@ header .icons #user-icon{
 
 .dishes .box-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-columns: repeat(3, minmax(20rem, 1fr));
     gap:4rem;
 }
 
@@ -610,7 +610,7 @@ header .icons #user-icon{
 }
 .footer .box-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
     gap:1.5rem;
     padding-left: 200px;
 }
