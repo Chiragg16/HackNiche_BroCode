@@ -62,7 +62,7 @@ section:nth-child(even){
     margin-top: 1rem;
     display: inline-block;
     font-size: 1.7rem;
-    color:#495579;
+    color:white;
     background: var(--black);
     border-radius: 1rem;
     cursor: pointer;
@@ -72,7 +72,6 @@ section:nth-child(even){
 }
 
 .btn:hover{
-    background: #FAF8F1;
     letter-spacing: .1rem;
 }
 
