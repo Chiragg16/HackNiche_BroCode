@@ -18,7 +18,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- custom css file link  -->
     <link rel="stylesheet" href="../static/css/style.css">
-    <!-- <link rel="stylesheet" href="../static/css/style1.css"> -->
+    <link rel="stylesheet" href="../static/css/style1.css">
 
 </head>
 
@@ -28,7 +28,7 @@
 
     <header>
 
-        <a href="#" class="logo" style="font-size: 3.5rem;color: white;"><img
+        <a href="../templates/index.html" class="logo" style="font-size: 3.5rem;color: white;"><img
             src="../static/images/logonavbarindex.png"
             style="height: 48px; padding-bottom: 2%;">NEWSIFY</a>
     <nav class="navbar" style="margin-left: 600px;">
@@ -104,12 +104,12 @@
     <br>
     <br>
 
-    <section class="sec" style="background: url('../static/images/images/bg1.jpg');">
-        <div class="form-container" style="width: 55rem;">
-            <h1>Contact Us</h1>
+    <section class="sec" style="background: url('../static/images/images/bg1.jpg');margin-bottom:3%;">
+        <div class="form-container1" style="width: 50%;height: 100%;">
+            <h1 style="color:black">Contact Us</h1>
             <form action="" method="post">
                 <div class="control">
-                    <label for="name" class="na">Your Name</label>
+                    <label for="name" class="na" style = "color:black">Your Name</label>
                     <input type="text" class="" name="name" id="name" placeholder="Full Name" value="">
                     <span class="">
 
@@ -117,16 +117,17 @@
                 </div>
 
                 <div class="control">
-                    <label for="email" class="na">Subject</label>
+                    <label for="email" class="na" style="color:black">Subject</label>
                     <select name="drop" id="drop">
-                        <option value="Select" style="color:grey">Select</option>
-                        <option value="Query" style="color:grey">Query</option>
-                        <option value="Feedback" style="color:grey">Feedback</option>
+                        <option value="Select" style="color:black">Select</option>
+                        <option value="Query" style="color:black">Query</option>
+                        <option value="Feedback" style="color:black">Feedback</option>
                     </select>
                 </div>
 
                 <div class="control">
-                    <label for="subject" class="na">Subject</label>
+                    <label for="email" class="na" style="color:black">Gmail</label>
+                    <!-- <label for="subject" class="na" style = "color:black">Subject</label> -->
                     <input type="text" class="" name="email" id="email" placeholder="Email-Address" value="">
                     <span class="">
 
@@ -134,7 +135,7 @@
                 </div>
 
                 <div class="control">
-                    <label for="message" class="na">Your Message</label>
+                    <label for="message" class="na" style = "color:black ">Your Message</label>
                     <textarea style="overflow:hidden; resize:none" type="text" class="" name="message" id="message"
                         placeholder="Write your message here" value=""></textarea>
                     <span class="">
@@ -150,7 +151,7 @@
 
         </div>
     </section>
-    <section class="footer">
+    <section class="footer" style="padding-top:0">
 
         <div class="box-container">
 
