@@ -65,7 +65,6 @@ section:nth-child(even){
     color:white;
     font-size: 200%;
     color:#495579;
-    background: var(--black);
     border-radius: 1rem;
     cursor: pointer;
     /* padding:.8rem 3rem; */
