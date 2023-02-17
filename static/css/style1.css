@@ -113,6 +113,27 @@
     
     
   }
+  
+button{
+  cursor: pointer;
+  outline: 0;
+  color: #AAA;
+
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.green{
+  /* background-color: green; */
+  color: green;
+}
+
+.red{
+  color: red;
+}
+
   .control input[type="submit"]:hover {
     opacity: 1;
   }
