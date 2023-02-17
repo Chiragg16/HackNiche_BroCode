@@ -12,7 +12,7 @@
     position: relative;
     height: 100vh;
     width: 100%;
-    background: url("../images/b.jpg");
+    background: url("../images/newspaper-background-concept.jpg");
     padding: 0;
     margin: 0;
     background-size: cover;
@@ -24,7 +24,9 @@
     left: 50%;
     /* padding: 0px; */
     transform: translate(-50%, -50%);
-    background-color: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    background-color: white;
+    color: black;
+    opacity: 90%;
     width: 480px;
     padding: 30px 60px;
     border-radius: 10px;
@@ -48,12 +50,12 @@
     margin: 1em 0;
   }
   .control input[type="submit"] {
-    background: #B6AD90;
+    background: #ff6e26;
     color: #fff;
     text-transform: uppercase;
     font-size: 1.6rem;
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
+    
+    
   }
   .control input[type="submit"]:hover {
     opacity: 1;

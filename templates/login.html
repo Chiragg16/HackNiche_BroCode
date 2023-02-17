@@ -29,21 +29,21 @@
 				style="height: 100px; filter: brightness(100); padding-bottom: 5px; display: inline-block;">bookbuddy</a> -->
 
 		<div class="form-container">
-			<h1>Login</h1>
+			<h1 class="login-text">Login</h1>
 			<form action="" method="post">
 				<div class="control">
-					<label for="email">Email</label>
+					<label for="email" class="login-text">Email</label>
 					<input type="text" class="" name="email" id="email" placeholder="Email-Address" value="">
 					<span class="">
 
 					</span>
 				</div>
 				<div class="control">
-					<label for="psw">Password</label>
-					<input type="password" class="" placeholder="********" name="password" minlength="8" maxlength="14"
+					<label for="psw" class="login-text">Password</label>
+					<input type="password" class="login-text" placeholder="********" name="password" minlength="8" maxlength="14"
 						id="pass" required>
 					<span class="">
-						<?php echo $password_err; ?>
+						
 					</span>
 				</div>
 				<a href="javascript:showHide();" class="txt">
