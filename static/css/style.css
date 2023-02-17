@@ -3,7 +3,7 @@
 :root{
     --green:#27ae60;
     --black:#000000;
-    --light-color:rgb(255, 255, 255);
+    --light-color:#FFFBEB;
     --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
 }
 
@@ -20,6 +20,12 @@ a:hover {
     outline: none; border:none;
     text-transform: capitalize;
     transition: all .2s linear;
+    color : white;
+}
+
+#blacker{
+    color : black;
+    font-weight: 500;
 }
 
 html{
@@ -34,7 +40,7 @@ section{
 }
 
 section:nth-child(even){
-    background:#eee;
+    background:#FFFBEB;
 }
 
 .sub-heading{
@@ -56,23 +62,24 @@ section:nth-child(even){
     margin-top: 1rem;
     display: inline-block;
     font-size: 1.7rem;
-    color:#fff;
+    color:#495579;
     background: var(--black);
     border-radius: 1rem;
     cursor: pointer;
     padding:.8rem 3rem;
     height: 40px;
+    padding-bottom: 15%;
 }
 
 .btn:hover{
-    background: #B6AD90;
+    background: #FAF8F1;
     letter-spacing: .1rem;
 }
 
 header{
     position: fixed;
     top:0; left: 0; right:0;
-    background: #B6AD90;
+    background: #263159;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -97,12 +104,12 @@ header .navbar a{
     border-radius: .5rem;
     padding:00;
     margin: 0 20px;
-    color:rgb(0, 0, 0);
+    color:#fff;
 }
 /* 
 header .navbar a.active,
 header .navbar a:hover{
-    color:#fff;
+    color:#495579;
     text-decoration: none;
 } */
 
@@ -117,18 +124,18 @@ header .icons a{
     font-size: 1.7rem;
     color:var(--black);
     border-radius: 50%;
-    background: #eee;
-    background: #B6AD90;
+    background: #FFFBEB;
+    background: #263159;
     color:rgb(0, 0, 0);
 }
 
 header .icons i:hover,
 header .icons a:hover{
-    /* color:#fff; */
+    /* color:#495579; */
     /* background: var(--green); */
     transform: rotate(360deg);
-    background: #B6AD90;
-    background: #eee;
+    background: #263159;
+    background: #FFFBEB;
     color:rgb(0, 0, 0);
 }
 
@@ -158,16 +165,16 @@ header .icons #user-icon{
 
 #search-form #search-box{
     width:50rem;
-    border-bottom: .1rem solid #fff;
+    border-bottom: .1rem solid #495579;
     padding:1rem 0;
-    color:#fff;
+    color:#495579;
     font-size: 3rem;
     text-transform: none;
     background:none;
 }
 
 #search-form #search-box::placeholder{
-    color:#eee;
+    color:#FFFBEB;
 }
 
 #search-form #search-box::-webkit-search-cancel-button{
@@ -175,7 +182,7 @@ header .icons #user-icon{
 }
 
 #search-form label{
-    color:#fff;
+    color:#495579;
     cursor:pointer;
     font-size: 3rem;
 }
@@ -186,7 +193,7 @@ header .icons #user-icon{
 
 #search-form #close{
     position: absolute;
-    color:#fff;
+    color:#495579;
     cursor: pointer;
     top: 2rem; right:3rem;
     font-size: 4rem;
@@ -196,7 +203,7 @@ header .icons #user-icon{
 }
 .home .home-slider .slide{
     display: flex;
-    /* background-color: #fff; */
+    /* background-color: #495579; */
     align-items: center;
     flex-wrap: wrap;
     gap:2rem; 
@@ -269,7 +276,7 @@ header .icons #user-icon{
 
 .dishes .box-container .box{
     padding:2.5rem;
-    background:#fff;
+    background:#495579;
     border-radius: 1rem;
     /* border:.1rem solid rgba(0,0,0,.2); */
     /* box-shadow: var(--box-shadow); */
@@ -283,7 +290,7 @@ header .icons #user-icon{
 .dishes .box-container .box .fa-eye{
     position: absolute;
     top:1.5rem;
-    background:#eee;
+    background:#FFFBEB;
     border-radius: 50%;
     height: 5rem;
     width:5rem;
@@ -294,7 +301,7 @@ header .icons #user-icon{
 
 .dishes .box-container .box .fa-heart:hover,
 .dishes .box-container .box .fa-eye:hover{
-    background: #B6AD90;
+    background: #263159;
     color:rgb(0, 0, 0);
     text-decoration: none;
     
@@ -393,7 +400,7 @@ header .icons #user-icon{
 }
 
 .about .row .content .icons-container .icons{
-    background:#B6AD90;
+    background:#263159;
     border-radius: .5rem;
     /* border:.1rem solid rgba(0,0,0,.2); */
     display: flex;
@@ -423,7 +430,7 @@ header .icons #user-icon{
 
 
 .menu .box-container .box{
-    background: #fff;
+    background: #495579;
     box-shadow:0 .5rem 1.5rem rgba(0,0,0,.2);
     border-radius: .5rem;
     /* box-shadow: var(--box-shadow);   */
@@ -454,14 +461,14 @@ header .icons #user-icon{
     line-height: 5rem;
     text-align: center;
     font-size: 2rem;
-    background: #fff;
+    background: #495579;
     border-radius: 50%;
     color:var(--black);
 }
 
 .menu .box-container .box .image .fa-heart:hover{
     background-color: var(--green);
-    color:#fff;
+    color:#495579;
 }
 
 .menu .box-container .box .content{
@@ -498,18 +505,19 @@ header .icons #user-icon{
 
 .review .slide{
     padding:2rem;
-    background-color: #fff;
+    background-color: #495579;
     box-shadow:var(--box-shadow);
     border:.1rem solid rgba(0,0,0,.2);
     border-radius: .5rem;
-    position: relative;    
+    position: relative; 
+    margin : 2%;   
 }
 
 .review .slide .fa-quote-right{
     position: absolute;
     top:2rem; right:2rem;
-    font-size: 6rem;
-    color:#ccc;
+    font-size: 3rem;
+    color:#FFFBEB;
 }
 
 .review .slide .user{
@@ -540,7 +548,7 @@ header .icons #user-icon{
 .review .slide p{
     font-size: 1.5rem;
     line-height: 1.8;
-    color:var(--black);
+    /* color:var(--black); */
 }
 
 .order form{
@@ -548,7 +556,7 @@ header .icons #user-icon{
     border-radius: .5rem;
     box-shadow: var(--box-shadow);
     border:.1rem solid rgba(0,0,0,.2);
-    background:#fff;
+    background:#495579;
     padding:1.5rem;
     margin:0 auto;
 }
@@ -572,7 +580,7 @@ header .icons #user-icon{
 
 .order form .inputBox .input input,
 .order form .inputBox .input textarea{
-    background:#eee;
+    background:#FFFBEB;
     border-radius: .5rem;
     padding:1rem;
     font-size: 1.6rem;
@@ -597,7 +605,7 @@ header .icons #user-icon{
 }
 
 .footer{
-    background-color: #B6AD90 !important;
+    background-color: #263159 !important;
     /* padding-left: 300px; */
 }
 .footer .box-container{
@@ -646,7 +654,7 @@ header .icons #user-icon{
     height:100%; 
     width:100%;
     z-index: 10000;
-    background:#fff;
+    background:#495579;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -767,7 +775,7 @@ header .icons #user-icon{
     header .navbar{
         position: absolute;
         top:100%; left:0; right:0;
-        background:#fff;
+        background:#495579;
         border-top: .1rem solid rgba(0,0,0,.2);
         border-bottom: .1rem solid rgba(0,0,0,.2);
         padding:1rem;
@@ -783,7 +791,7 @@ header .icons #user-icon{
         padding:1.5rem;
         margin:1rem;
         font-size: 2rem;
-        background:#eee;
+        background:#FFFBEB;
     }
 
     #search-form #search-box{
