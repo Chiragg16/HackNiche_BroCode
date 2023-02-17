@@ -28,35 +28,35 @@ window.onload = function() {
 };
 
 
-// generalBtn.addEventListener("click", function() {
-//     newsType.innerHTML = "<h4>General News</h4>";
-//     fetchGeneralNews();
-// });
+generalBtn.addEventListener("click", function() {
+    newsType.innerHTML = "<h4>General News</h4>";
+    fetchGeneralNews();
+});
 
-// businessBtn.addEventListener("click", function() {
-//     newsType.innerHTML = "<h4>Business News</h4>";
-//     fetchBusinessNews();
-// });
+businessBtn.addEventListener("click", function() {
+    newsType.innerHTML = "<h4>Business News</h4>";
+    fetchBusinessNews();
+});
 
-// sportsBtn.addEventListener("click", function() {
-//     newsType.innerHTML = "<h4>Sports News</h4>";
-//     fetchSportsNews();
-// });
+sportsBtn.addEventListener("click", function() {
+    newsType.innerHTML = "<h4>Sports News</h4>";
+    fetchSportsNews();
+});
 
-// entertainmentBtn.addEventListener("click", function() {
-//     newsType.innerHTML = "<h4>Entertainment News</h4>";
-//     fetchEntertainmentNews();
-// });
+entertainmentBtn.addEventListener("click", function() {
+    newsType.innerHTML = "<h4>Entertainment News</h4>";
+    fetchEntertainmentNews();
+});
 
-// technologyBtn.addEventListener("click", function() {
-//     newsType.innerHTML = "<h4>Technology News</h4>";
-//     fetchTechnologyNews();
-// });
+technologyBtn.addEventListener("click", function() {
+    newsType.innerHTML = "<h4>Technology News</h4>";
+    fetchTechnologyNews();
+});
 
-// searchBtn.addEventListener("click", function() {
-//     //newsType.innerHTML = "<h4>Search : " + newsQuery.value + "</h4>";
-//     fetchQueryNews();
-// });
+searchBtn.addEventListener("click", function() {
+    //newsType.innerHTML = "<h4>Search : " + newsQuery.value + "</h4>";
+    fetchQueryNews();
+});
 
 const fetchHeadlines = async() => {
     const response = await fetch(HEADLINES_NEWS + API_KEY);
@@ -178,30 +178,63 @@ const fetchQueryNews = async() => {
 
 function displayNews() {
 
-   
+    newsdetails.innerHTML = "";
+
+
     newsDataArr.forEach(news => {
-    if(news.urlToImage==null){
-        console.log("dummy");
-        news.urlToImage="../static/images/download.png"
-    }    
-    var items = [];
-    var li =
-      '<div class="box" id="newsdisplay">'+
-        '<a href="#" class="fas fa-heart"></a>'+
-        '<a href="#" class="fas fa-eye"></a>'+
-        '<img class="image" src="'+news.urlToImage+'"alt="">'+
-        '<h4 style="font-size: 20px;">'+news.title+'</h4>'+
-        '<h5 style="font-size: 14px;">'+news.author+'</h5>'+
-        '<div class="likedislike">'+
-            '<button class="btn"><i id="green" class="fa fa-thumbs-up fa-lg" aria-hidden="true"></i></button>'+
-        '<button class="btn"><i id="red" class="fa fa-thumbs-down fa-lg" aria-hidden="true"></i></button>'+
-        '<button class="btn" ><i  class="fas fa-comment"></i></button>'+
-        '<button class="btn" ><i  class="fa fa-share-alt"></i></button>'+
-        '</div>'+
-    '</div>';
-    items.push(li);
-    console.log(li);
-        $("#newsdisplay").append(items.join(""));        
+
+        var date = news.publishedAt.split("T");
+
+        var col = document.createElement('div');
+        col.className = "col-sm-12 col-md-4 col-lg-3 p-2 card";
+
+        var card = document.createElement('div');
+        card.className = "p-2";
+
+        var image = document.createElement('img');
+        image.setAttribute("height", "matchparent");
+        image.setAttribute("width", "100%");
+        if(!news.urlToImage)
+        {
+            image.src = "dummy.jpg";
+        }
+        else
+        {
+            image.src = news.urlToImage;
+        }
+       
+
+        var cardBody = document.createElement('div');
+
+        var newsHeading = document.createElement('h5');
+        newsHeading.className = "card-title";
+        newsHeading.innerHTML = news.title;
+
+        var dateHeading = document.createElement('h6');
+        dateHeading.className = "datee";
+        dateHeading.innerHTML = date[0];
+
+        var description = document.createElement('p');
+        description.className = "text-muted";
+        description.innerHTML = news.description;
+
+        var link = document.createElement('a');
+        link.className = "btn btn-dark buttoncolor";
+        link.setAttribute("target", "_blank");
+        link.href = news.url;
+        link.innerHTML = "Read more";
+
+        cardBody.appendChild(newsHeading);
+        cardBody.appendChild(dateHeading);
+        cardBody.appendChild(description);
+        cardBody.appendChild(link);
+
+        card.appendChild(image);
+        card.appendChild(cardBody);
+
+        col.appendChild(card);
+
+        newsdetails.appendChild(col);
     });
 
 }
