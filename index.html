@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEWSIFY</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+
+    <!-- header section starts      -->
+
+    <header>
+
+        <a href="#" class="logo" style="font-size: 3.5rem;"><img
+                src="images/logo.png"
+                style="height: 48px; filter: brightness(0); padding-bottom: 5px;">NEWSIFY</a>
+        <nav class="navbar" style="margin-left: 600px;">
+            <a class="active" href="index.html">home</a>
+            <a href="aboutus.html">about us</a>
+            <a href="contactus.html">contact us</a>
+
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <!--  <a href="/wishList.html" class="fas fa-heart"></a> -->
+            <a href="" class="fas fa-user" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"></a>
+            <a href="" class="fas fa-user" data-bs-toggle="modal" data-bs-target="#exampleModalCenter1"></a>
+        </div>
+
+        <!-- Modal -->
+    </header>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="exampleModalLongTitle" style="margin:0 20px;"><b>Profile</b></h2>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" style="font-size: 25px; margin-right:2rem;">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img style="border-radius: 50%;" src="images/images.png" class="image-respomsive img-center" />
+                    <div class="modal-header text-center">
+                        <!-- <h3 class="modal-title w-100">Username</h3> -->
+                    </div>
+                </div>
+                <div class="">
+                    <a href="login.html"
+                        style="width: 40rem; background: #B6AD90; margin: 10px 5rem; border-radius: 12px;"
+                        class="btn">Login</a>
+                    <br>
+                    <a href="register.html"
+                        style="width: 40rem; background: #B6AD90; margin: 5px 5rem 3rem 5rem; border-radius: 12px;"
+                        class="btn">Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+        integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
+        crossorigin="anonymous"></script>
+
+    <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="exampleModalLongTitle" style="margin:0 20px;"><b>Profile</b></h2>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" style="font-size: 25px; margin-right:2rem;">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img style="border-radius: 50%;" src="images/images.png" class="image-respomsive img-center" />
+                    <div class="modal-header text-center">
+                        <h3 class="modal-title w-100">Username</h3>
+                    </div>
+                </div>
+                <div class="">
+                    <a href="wishlist.html"
+                        style="width: 40rem; background: #B6AD90; margin: 10px 5rem; border-radius: 12px;"
+                        class="btn">WishList</a>
+                    <br>
+                    <a href="#"
+                        style="width: 40rem; background: #B6AD90; margin: 5px 5rem 3rem 5rem; border-radius: 12px;"
+                        class="btn">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+        integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
+        crossorigin="anonymous"></script>
+    <!-- header section ends-->
+
+    <!-- search form  -->
+
+    <form action="" id="search-form">
+        <input type="search" placeholder="search here..." name="" id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+        <i class="fas fa-times" id="close"></i>
+    </form>
+
+    <!-- home section starts  -->
+
+    <section class="home" id="home">
+
+        <div class="swiper-container home-slider">
+
+            <div class="swiper-wrapper wrapper">
+
+                <div class="swiper-slide slide">
+
+                    <div class="image">
+                        <img src="images/jonas-jacobsson-0FRJ2SCuY4k-unsplash (1).jpg" alt="">
+                        <div class="centered"><b>A great book should leave you with many experiences, and slightly
+                                exhausted at the end. You live several lives while reading.</b></div>
+
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="images/vrinceanu-iulia-EL_1-pVO2gw-unsplash.jpg" alt="">
+                        <div class="centered1"><b>Reading is a conversation. All books talk. But a good book listens as
+                                well.</b></div>
+
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+
+                    <div class="image">
+                        <img src="images/freestocks-OfaDD5o8hpk-unsplash.jpg" alt="">
+                        <div class="centered2"><b>A reader lives a thousand lives before he dies.</b></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </section>
+    <section style="background-color: #fff; width: 0;"></section>
+    <section class="dishes" id="dishes" style="padding-top: 0;">
+        <div id="intro">
+            <div class="bg_big bg_big_green glow">
+                <div id="opac1">
+                    <h1><b>Trending</b></h1>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="box-container">
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="images/littlewomen.jpeg" alt="">
+                <h4 style="font-size: 20px;">Little Women</h4>
+                <h5 style="font-size: 14px;">Louisa May Alcott</h5>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="btn">View More</a>
+            </div>
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="images/pride.jpeg" alt="">
+                <h4 style="font-size: 20px;">Pride And Prejudice</h4>
+                <h5 style="font-size: 14px;">Jane Austin</h5>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="btn">View More</a>
+            </div>
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="images/it ends with us.jpg" alt="">
+                <h4 style="font-size: 20px;">It Ends With Us</h4>
+                <h5 style="font-size: 14px;">Collen Hoover</h5>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="btn">View More</a>
+            </div>
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="images/harry1.jpeg" alt="">
+                <h4 style="font-size: 20px;">Harry Potter and sorcer's atone</h4>
+                <h5 style="font-size: 14px;">J.K Rowling</h5>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="btn">View More</a>
+            </div>
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="images/fivefeet.jpeg" alt="">
+                <h4 style="font-size: 20px;">Five Feet Apart</h4>
+                <h5 style="font-size: 14px;">Brian Tyler</h5>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="btn">View More</a>
+            </div>
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="images/to.jpg" alt="">
+                <h4 style="font-size: 20px;">To Kill a Mockingbird</h4>
+                <h5 style="font-size: 14px;">Louisa May Alcott</h5>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>+-
+                <a href="#" class="btn">View More</a>
+            </div>
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="images/november.jpg" alt="">
+                <h4 style="font-size: 20px;">November 9th</h4>
+                <h5 style="font-size: 14px;">Collen Hoover</h5>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="btn">View More</a>
+            </div>
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="images/thealchemist.jpg" alt="">
+                <h4 style="font-size: 20px;">The Alchemist</h4>
+                <h5 style="font-size: 14px;">Paulo Coelho</h5>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="btn">View More</a>
+            </div>
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="images/inkigai.jpg" alt="">
+                <h4 style="font-size: 20px;">Ikigai</h4>
+                <h5 style="font-size: 14px;">Francesc Miralles</h5>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="btn">View More</a>
+            </div>
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="images/wings.jpg" alt="">
+                <h4 style="font-size: 20px;">Wings Of Fire</h4>
+                <h5 style="font-size: 14px;">A. P. J. Abdul Kalam with Arun Tiwari</h5>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="btn">View More</a>
+            </div>
+        </div>
+        <br>
+    </section>
+    <!-- menu section ends -->
+
+    <!-- review section starts  -->
+
+    <section class="review" id="review">
+
+        <h3 class="sub-heading"> reviews </h3>
+        <h2 class="heading"> what they say </h2>
+
+        <div class="swiper-container review-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide slide">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="images/images.png" alt="">
+                        <div class="user-info">
+                            <h3>Rohan Ajmera</h3>
+                            <label class="cap" style="font-size:15px">
+                                12/04/2022
+                            </label>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ullam dicta doloribus
+                        optio sint, magni inventore tempore molestiae aspernatur suscipit? Veritatis, perferendis?
+                        Tempora suscipit porro impedit.</p>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="images/images.png" alt="">
+                        <div class="user-info">
+                            <h3>Saniya Shah</h3>
+                            <label class="cap" style="font-size:15px">
+                                12/04/2022
+                            </label>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem neque, optio quae aperiam esse
+                        dolores libero, eveniet dignissimos soluta incidunt expedita repellat corrupti commodi quas
+                        quasi quam. Reprehenderit, expedita. Fugiat!</p>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="images/images.png" alt="">
+                        <div class="user-info">
+                            <h3>Raj Khanna</h3>
+                            <label class="cap" style="font-size:15px">
+                                12/04/2022
+                            </label>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa vel ut error officia a voluptatem
+                        optio nisi pariatur perspiciatis doloremque nobis, necessitatibus unde beatae aliquam amet
+                        consectetur sit autem dolorum.</p>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="images/images.png" alt="">
+                        <div class="user-info">
+                            <h3>Trupti patel</h3>
+                            <label class="cap" style="font-size:15px">
+                                12/04/2022
+                            </label>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur vel culpa blanditiis harum
+                        quo ipsa consequatur dignissimos quidem qui perferendis asperiores illum, eos dolore reiciendis
+                        suscipit molestias animi cumque hic!</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <section class="dishes" id="dishes">
+        <div id="intro">
+            <div class="bg_big bg_big_green glow">
+                <div id="opac1">
+                    <h1><b> most rated </b></h1>
+                </div>
+            </div>
+        </div>
+        <!-- <h3 class="sub-heading"> Trending </h3> -->
+        <br><br>
+        <div class="box-container">
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="images/littlewomen.jpeg" alt="">
+                <h4 style="font-size: 20px;">Little Women</h4>
+                <h5 style="font-size: 14px;">Louisa May Alcott</h5>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="btn">View More</a>
+            </div>
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="images/pride.jpeg" alt="">
+                <h4 style="font-size: 20px;">Pride And Prejudice</h4>
+                <h5 style="font-size: 14px;">Jane Austin</h5>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="btn">View More</a>
+            </div>
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="images/it ends with us.jpg" alt="">
+                <h4 style="font-size: 20px;">It Ends With Us</h4>
+                <h5 style="font-size: 14px;">Collen Hoover</h5>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="btn">View More</a>
+            </div>
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="images/harry1.jpeg" alt="">
+                <h4 style="font-size: 20px;">Harry Potter and sorcer's atone</h4>
+                <h5 style="font-size: 14px;">J.K Rowling</h5>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="btn">View More</a>
+            </div>
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="images/fivefeet.jpeg" alt="">
+                <h4 style="font-size: 20px;">Five Feet Apart</h4>
+                <h5 style="font-size: 14px;">Brian Tyler</h5>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="btn">View More</a>
+            </div>
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="images/to.jpg" alt="">
+                <h4 style="font-size: 20px;">To Kill a Mockingbird</h4>
+                <h5 style="font-size: 14px;">Louisa May Alcott</h5>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="btn">View More</a>
+            </div>
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="images/november.jpg" alt="">
+                <h4 style="font-size: 20px;">November 9th</h4>
+                <h5 style="font-size: 14px;">Collen Hoover</h5>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="btn">View More</a>
+            </div>
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="images/thealchemist.jpg" alt="">
+                <h4 style="font-size: 20px;">The Alchemist</h4>
+                <h5 style="font-size: 14px;">Paulo Coelho</h5>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="btn">View More</a>
+            </div>
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="images/inkigai.jpg" alt="">
+                <h4 style="font-size: 20px;">Ikigai</h4>
+                <h5 style="font-size: 14px;">Francesc Miralles</h5>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="btn">View More</a>
+            </div>
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="images/wings.jpg" alt="">
+                <h4 style="font-size: 20px;">Wings Of Fire</h4>
+                <h5 style="font-size: 14px;">A. P. J. Abdul Kalam with Arun Tiwari</h5>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="btn">View More</a>
+            </div>
+        </div>
+
+    </section>
+    <!-- review section ends -->
+
+    <!-- order section starts  -->
+
+    <section class="order" id="order">
+
+        <h3 class="sub-heading"> order now </h3>
+        <h2 class="heading"> free and fast </h2>
+
+        <form action="">
+
+            <div class="inputBox">
+                <div class="input">
+                    <span>your name</span>
+                    <input type="text" placeholder="enter your name">
+                </div>
+                <div class="input">
+                    <span>your number</span>
+                    <input type="number" placeholder="enter your number">
+                </div>
+            </div>
+            <div class="inputBox">
+                <div class="input">
+                    <span>your order</span>
+                    <input type="text" placeholder="enter food name">
+                </div>
+                <div class="input">
+                    <span>additional food</span>
+                    <input type="test" placeholder="extra with food">
+                </div>
+            </div>
+            <div class="inputBox">
+                <div class="input">
+                    <span>how much</span>
+                    <input type="number" placeholder="how many orders">
+                </div>
+                <div class="input">
+                    <span>date and time</span>
+                    <input type="datetime-local">
+                </div>
+            </div>
+            <div class="inputBox">
+                <div class="input">
+                    <span>your address</span>
+                    <textarea name="" placeholder="enter your address" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="input">
+                    <span>your message</span>
+                    <textarea name="" placeholder="enter your message" id="" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+
+            <input type="submit" value="order now" class="btn">
+
+        </form>
+
+    </section>
+
+    <!-- order section ends -->
+
+    <!-- footer section starts  -->
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="index.html">home</a>
+                <a href="aboutus.html">about us</a>
+                <a href="contactus.html">contact us</a>
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <!-- <a style="font-size: 20px;"; >Phone Number</a> -->
+                <!-- <i class="fas fa-star" style="display:inline-block;"></i> -->
+                <h3 style="display:inline-block; font-size: 18px;"><i class="fa fa-phone"
+                        style="padding: 5px;"></i>Phone Number</h3>
+                <a href="#">+123-456-7890</a>
+                <a href="#">+111-222-3333</a>
+                <h3 style="display:inline-block; font-size: 18px;"><i class="fa fa-envelope"
+                        style="padding: 5px;"></i>Email</h3>
+                <a href="#" style="text-transform: lowercase;">bookbuddy@gmail.com</a>
+            </div>
+
+            <div class="box">
+                <h3>Connect</h3>
+                <a href="https://www.facebook.com/"><i class="fa fa-facebook"
+                        style="padding: 5px; color: black;"></i>facebook</a>
+                <a href="https://www.twitter.com/"><i class="fa fa-twitter" style="padding: 5px;"></i>twitter</a>
+                <a href="https://www.instagram.com/"><i class="fa fa-instagram" style="padding: 5px;"></i>instagram</a>
+                <a href="https://www..com/"><i class="fa fa-linkedin" style="padding: 5px;"></i>linkedin</a>
+            </div>
+
+        </div>
+
+        <div class="credit"> <a href="#" class="logo"
+                style="text-transform: lowercase;font-size: 3.5rem; color: black;"><img src="images/onlysquirrel1.png"
+                    style="height: 48px; filter: brightness(0); padding-bottom: 5px;">bookbuddy</a>
+        </div>
+
+
+
+    </section>
+
+    <!-- footer section ends -->
+
+    <!-- loader part  -->
+    <div class="loader-container">
+        <img src="images/1613600701_82187_gif-url.gif" alt="">
+    </div>
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
