@@ -11,6 +11,7 @@ const newsdetails = document.getElementById("newsdetails");
 
 // Array
 var newsDataArr = [];
+var count=0;
 
 // apis 
 const API_KEY = "272dcee210274c80b7df905af4e925ec";
@@ -28,35 +29,31 @@ window.onload = function() {
 };
 
 
-// generalBtn.addEventListener("click", function() {
-//     newsType.innerHTML = "<h4>General News</h4>";
-//     fetchGeneralNews();
-// });
 
-// businessBtn.addEventListener("click", function() {
-//     newsType.innerHTML = "<h4>Business News</h4>";
-//     fetchBusinessNews();
-// });
+generalBtn.addEventListener("click", function() {
+    fetchGeneralNews();
+});
 
-// sportsBtn.addEventListener("click", function() {
-//     newsType.innerHTML = "<h4>Sports News</h4>";
-//     fetchSportsNews();
-// });
+businessBtn.addEventListener("click", function() {
+    fetchBusinessNews();
+});
 
-// entertainmentBtn.addEventListener("click", function() {
-//     newsType.innerHTML = "<h4>Entertainment News</h4>";
-//     fetchEntertainmentNews();
-// });
+sportsBtn.addEventListener("click", function() {
+    fetchSportsNews();
+});
 
-// technologyBtn.addEventListener("click", function() {
-//     newsType.innerHTML = "<h4>Technology News</h4>";
-//     fetchTechnologyNews();
-// });
+entertainmentBtn.addEventListener("click", function() {
+    fetchEntertainmentNews();
+});
 
-// searchBtn.addEventListener("click", function() {
-//     //newsType.innerHTML = "<h4>Search : " + newsQuery.value + "</h4>";
-//     fetchQueryNews();
-// });
+technologyBtn.addEventListener("click", function() {
+    fetchTechnologyNews();
+});
+
+searchBtn.addEventListener("click", function() {
+    //newsType.innerHTML = "<h4>Search : " + newsQuery.value + "</h4>";
+    fetchQueryNews();
+});
 
 
 function fetchHeadlines() {
@@ -64,7 +61,7 @@ function fetchHeadlines() {
     $.ajax({
     url: "https://us-central1-projectnewsify.cloudfunctions.net/getNews",
     success: function (response) {
-      console.log("https://us-central1-projectnewsify.cloudfunctions.net/getNews",response);
+    //   console.log("https://us-central1-projectnewsify.cloudfunctions.net/getNews",response);
       newsDataArr=response;
       displayNews();
     },
@@ -179,8 +176,9 @@ const fetchQueryNews = async() => {
 
 
 function displayNews() {
+    
 console.log(newsDataArr.length)
-
+document.getElementById("newsdisplay").innerHTML="";
     for(var i=0;i<newsDataArr.length;i++)
 {
     console.log("news fss")
@@ -194,13 +192,13 @@ console.log(newsDataArr.length)
         '<a href="#" class="fas fa-heart"></a>'+
         '<a href="#" class="fas fa-eye"></a>'+
         '<img class="image" src="'+newsDataArr[i].urlToImage+'"alt="">'+
-        '<h4 style="font-size: 20px;">'+newsDataArr[i].title+'</h4>'+
+        '<a href="'+newsDataArr[i].url+'"><h4 style="color:white;font-size: 20px;"onclick="">'+newsDataArr[i].title+'</h4>'+'</a>'+
         '<h5 style="font-size: 14px;">'+newsDataArr[i].author+'</h5>'+
         '<div class="likedislike">'+
-            '<button class="btn"><i id="green" class="fa fa-thumbs-up fa-lg" aria-hidden="true"></i></button>'+
-        '<button class="btn"><i id="red" class="fa fa-thumbs-down fa-lg" aria-hidden="true"></i></button>'+
+            '<button class="btn" style:"color:#fff;"><i id="green" onclick="green()" class="fa fa-thumbs-up fa-lg " aria-hidden="true"></i> 2</button>'+
+        '<button class="btn" style:"color:#fff;font-weight:bold;"><i id="red" onclick="red()"  class="fa fa-thumbs-down fa-lg" aria-hidden="true"></i> 0</button>'+
         '<button class="btn"><i  class="fas fa-comment" onclick="viewMoreSpecialPackageModal('+i+')"></i></button>'+
-        '<button class="btn" ><i  class="fa fa-share-alt"></i></button>'+
+        '<button class="btn" ><i  class="fa fa-share-alt" onclick="copyToClipboard('+ newsDataArr[i].url +')"></i></button>'+
         '</div>'+
     '</div>'+
     '<div class="modal fade" id="examplecomments'+i+'" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">'+
@@ -212,25 +210,145 @@ console.log(newsDataArr.length)
                     '<span aria-hidden="true">&times;</span>'+
                  ' </button>'+
                 '</div>'+
-                '<div class="modal-body">'+
-                '<label for="lname">Last name:</label><br>'+
-                '<input type="text" id="lname" name="lname" value="Doe">'+
-                '<input type="submit" value="Submit"></input>'
+                '<div class="modal-body" style="text-align: center;">'+
+                // '<label for="lname">Last name:</label><br>'+
+                '<form>'+
+                '<input type="text" id="lname" name="lname" value="" placeholder="Comment" style="background-color:lightgrey;padding:1%;border-radius:0.3rem;color:white;border-bottom: 1.5px solid grey;display:inline;">'+
+                '<input type="submit" class=" button" value="Submit" style="background-color:#263159;color:white;padding:1%;border-radius:0.3rem;margin-left:3%;display:inline"></input>'
                 +'</div>'+
+                '</form>'+
                 '<div class="modal-footer">'+
                  ' <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>'+
                   '<button type="button" class="btn btn-primary">Save changes</button>'+
                ' </div>'+
               '</div>'+
             '</div>'+
-          '</div>';
+          '</div>'; 
     items.push(li);
-    console.log(li);
+    // console.log(li); 
+
         $("#newsdisplay").append(items.join(""));        
 };
 }
+function displayNews1() {
+    
+    console.log(newsDataArr.length)
+    
+        for(var i=0;i<newsDataArr.length;i++)
+    {
+        console.log("news fss")
+        if(newsDataArr[i].urlToImage==null){
+            console.log("dummy");
+            newsDataArr[i].urlToImage="../static/images/download.png"
+        }    
+        var items = [];
+        var li =
+          '<div class="box" id="newsdisplay">'+
+            '<a href="#" class="fas fa-heart"></a>'+
+            '<a href="#" class="fas fa-eye"></a>'+
+            '<img class="image" src="'+newsDataArr[i].urlToImage+'"alt="">'+
+            '<a href="'+newsDataArr[i].url+'"><h4 style="color:white;font-size: 20px;"onclick="">'+newsDataArr[i].title+'</h4>'+'</a>'+
+            '<h5 style="font-size: 14px;">'+newsDataArr[i].author+'</h5>'+
+            '<div class="likedislike">'+
+                '<button class="btn" style:"color:#fff;"><i id="green" onclick="green()" class="fa fa-thumbs-up fa-lg " aria-hidden="true"></i> 0</button>'+
+            '<button class="btn" style:"color:#fff;font-weight:bold;"><i id="red" onclick="red()"  class="fa fa-thumbs-down fa-lg" aria-hidden="true"></i> 0</button>'+
+            '<button class="btn"><i  class="fas fa-comment" onclick="viewMoreSpecialPackageModal('+i+')"></i></button>'+
+            '<button class="btn" ><i  class="fa fa-share-alt"></i></button>'+
+            '</div>'+
+        '</div>'+
+        '<div class="modal fade" id="examplecomments'+i+'" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">'+
+                '<div class="modal-dialog modal-dialog-centered" role="document">'+
+                  '<div class="modal-content">'+
+                    '<div class="modal-header">'+
+                     ' <h5 class="modal-title" style="color: black; id="exampleModalLongTitle">'+newsDataArr[i].title+'</h5>'+
+                      '<button type="button" class="close" data-dismiss="modal" aria-label="Close">'+
+                        '<span aria-hidden="true">&times;</span>'+
+                     ' </button>'+
+                    '</div>'+
+                    '<div class="modal-body">'+
+                    '<input type="text" id="lname" name="lname" placeholder="Comment" style="background-color:lightgrey;padding:1%;border-radius:0.3rem;color:white;border-bottom: 1.5px solid grey;display:inline;">'+
+                '<input type="submit" class="button" value="Submit" style="background-color:#263159;color:white;padding:1%;border-radius:0.3rem;margin-left:3%;display:inline"></input>'
+                    +'</div>'+
+                    '<div class="modal-footer">'+
+                   ' </div>'+
+                  '</div>'+
+                '</div>'+
+              '</div>'; 
+        items.push(li);
+        // console.log(li); 
+            $("#newsdisplay").append(items.join(""));        
+    };
+    }
+    
+
+ 
+          
 function viewMoreSpecialPackageModal(new1){
 
     $("#examplecomments"+new1).modal("show");
     console.log(new1);
 }
+function viewMoreSpecialPackageModal1(new1){
+
+    $("#examplecomments1"+new1).modal("show");
+    console.log(new1);
+}
+
+var btn1 = document.querySelector('green');
+var btn2 = document.querySelector('#red');
+
+function green() {
+  
+    if (btn2.classList.contains('red')) {
+      btn2.classList.remove('red');
+    } 
+  this.classList.toggle('green');
+  
+};
+
+function red () {
+  
+    if (btn1.classList.contains('green')) {
+      btn1.classList.remove('green');
+    } 
+  this.classList.toggle('red');
+  
+};
+
+
+function genre(genres) {
+    console.log("before referesh")
+    localStorage.setItem("interest",genres)    
+    console.log("after referesh")
+    var inte = localStorage.getItem("interest")
+    var data2 = {
+        'interest' : genres
+    };    
+    console.log(data2)
+    $.ajax({
+    url: "https://us-central1-projectnewsify.cloudfunctions.net/topPicks",
+    type : "POST",
+    data:data2,
+    success: function (response) {
+      console.log("https://us-central1-projectnewsify.cloudfunctions.net/topPicks",response);
+      newsDataArr=response;
+      displayNews();
+    },
+    error: function (jqXHR, textStatus, errorThrown) {
+      console.log("ERROR ON NETWORK CALL", textStatus, errorThrown);
+    },
+  });
+  
+    }
+
+    function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(function() {
+            console.log('Async: Copying to clipboard was successful!');
+          }, function(err) {
+            console.error('Async: Could not copy text: ', err);
+          });
+}
+
+
+
+

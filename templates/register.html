@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../static/css/style1.css">
 
     <script src="js/showHide.js"></script>
+    <script src="../static/register.js"></script>
 </head>
 
 <body>
@@ -63,27 +64,30 @@
                 <a href="javascript:showHide();" class="txt">
                     <i class="fa fa-eye" id="eye"><span id="passstage"> Show</span></i>
                 </a>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"></a>
+                    <div class="dropdown-menu">
+                        choose your best interest
+                        <select id="ddlViewBy">
+                            <option value="general">general</option>
+                            <option value="business" selected="selected">business</option>
+                            <option value="sports">sports</option>
+                            <option value="technology">technology</option>
+                            <option value="entertainment">entertainment</option>
+                          </select>
+                    </div>
+                </li>
+    
                 <div class="control">
-                    <label for="Filtering" style = "display:block">Filtering Catagory</label>
-                <div>
-                    <button type="button" class="btn btn-outline-info" style="color:#86CEDA;border-color: #86CEDA;padding:2%;margin:2%">Buisness</button>
-                    <button type="button" class="btn btn-outline-info" style="color:#86CEDA;border-color: #86CEDA;margin:auto;padding:2%;margin:2%">Enterntainment</button>
-                    <button type="button" class="btn btn-outline-info" style="color:#86CEDA;border-color: #86CEDA;margin:auto;padding:2%;margin:2%">General</button>
-                </div>
-                <div>
-                    <button type="button" class="btn btn-outline-info" style="color:#86CEDA;border-color: #86CEDA;margin:auto;padding:2%;margin:2%">Sports</button>
-                    <button type="button" class="btn btn-outline-info" style="color:#86CEDA;border-color: #86CEDA;margin:auto;padding:2%;margin:2%">Health</button>
-                    <button type="button" class="btn btn-outline-info" style="color:#86CEDA;border-color: #86CEDA;margin:auto;padding:2%;margin:2%">Technology</button>
-                </div>
-                </div>
-                <div class="control">
-                    <input type="submit" value="Register">
+                    <input type="submit" onclick="register(e)" value="Register">
                 </div>
             </form>
             <div class="link">
                 <a href="login.html">Have an account? Login</a>
             </div>
         </div>
+        <script>
+           </script>
 </body>
 
 </html>
