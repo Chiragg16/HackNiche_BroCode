@@ -195,8 +195,45 @@ document.getElementById("newsdisplay").innerHTML="";
         '<a href="'+newsDataArr[i].url+'"><h4 style="color:white;font-size: 20px;"onclick="">'+newsDataArr[i].title+'</h4>'+'</a>'+
         '<h5 style="font-size: 14px;">'+newsDataArr[i].author+'</h5>'+
         '<div class="likedislike">'+
+
             '<button class="btn" style:"color:#fff;"><i id="green" onclick="green()" class="fa fa-thumbs-up fa-lg " aria-hidden="true"></i> 2</button>'+
         '<button class="btn" style:"color:#fff;font-weight:bold;"><i id="red" onclick="red()"  class="fa fa-thumbs-down fa-lg" aria-hidden="true"></i> 0</button>'+
+        '<button class="btn"><i id="green" class="fa fa-thumbs-up fa-lg" aria-hidden="true"></i></button>'+
+        '<button class="btn"><i id="red" class="fa fa-thumbs-down fa-lg" aria-hidden="true"></i></button>'+
+        '<button class="btn " data-toggle="modal" data-target="#examplecomments"><i  class="fas fa-comment"></i></button>'+
+        '<button class="btn" ><i  class="fa fa-share-alt"></i></button>'+
+        '</div>'+
+        '<div class="modal fade" id="examplecomments" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">'+
+            '<div class="modal-dialog modal-dialog-centered" role="document">'+
+              '<div class="modal-content">'+
+               ' <div class="modal-header" style="text-align: center; margin:auto">'+
+                 ' <h2 class="modal-title" id="exampleModalLongTitle" style="text-align: center; margin:auto;width:50%; color:black">Title</h2>'+
+                  '<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:black">'+
+                   ' <span aria-hidden="true" style="color: black; margin-left:500%;">&times;</span>'+
+                 ' </button>'+
+               ' </div>'+
+               ' <div class="modal-body">'+
+                   ' <h2 style="text-align: center; color:black"></h2>'+
+                   ' <p class="firstnewss" style="color:black;max-width: 500px; text-align: center;margin: auto;">Lorem ipsum dolor sit amet consectetur adipisicing elit. '+
+                       ' Accusantium excepturi enim tempora quam, quod eius eos aliquam esse laboriosam '+
+                     '   itaque quae natus neque rem? Nesciunt amet fugit aliquid ipsa recusandae?'+
+                      '  Lorem ipsum dolor sit amet consectetur adipisicing elit.'+ 
+                       ' Accusantium excepturi enim tempora quam, quod eius eos aliquam esse laboriosam '+
+                       ' itaque quae natus neque rem? Nesciunt amet fugit aliquid ipsa recusandae?'+
+                   ' </p>'+
+               ' </div>'+
+                '<div class="modal-footer">'+
+                    '<h3><a href="#"> <button class = "modalbutton">'+
+                       ' Read More'+
+                    '</button></a></h3>'+
+                 ' <!-- <button type="button" class="btn btn-secondary" style = "margin:auto;padding:2%;color:black"data-dismiss="modal">Close</button>'+
+                '  <button type="button" class="btn btn-primary" style = "margin:auto;padding:2%;">Save changes</button> -->'+
+                '</div>'+
+             ' </div>'+
+           ' </div>'+
+          '</div>'+
+    '</div>';
+
         '<button class="btn"><i  class="fas fa-comment" onclick="viewMoreSpecialPackageModal('+i+')"></i></button>'+
         '<button class="btn" ><i  class="fa fa-share-alt" onclick="copyToClipboard('+ newsDataArr[i].url +')"></i></button>'+
         '</div>'+
@@ -223,7 +260,8 @@ document.getElementById("newsdisplay").innerHTML="";
                ' </div>'+
               '</div>'+
             '</div>'+
-          '</div>'; 
+          '</div>';
+
     items.push(li);
     // console.log(li); 
 
